@@ -7,120 +7,132 @@
     android:background="@drawable/gradient_background"
     tools:context=".RegisterActivity">
 
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gH01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.1" />
 
     <ImageView
-        android:id="@+id/userprofile"
-        android:layout_width="85dp"
-        android:layout_height="88dp"
+        android:id="@+id/imgProfile"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="@string/user_profile_image"
         android:src="@drawable/user_acc"
-        app:layout_constraintBottom_toTopOf="@+id/welcome"
+        app:layout_constraintBottom_toTopOf="@+id/gH03"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.612" />
+        app:layout_constraintTop_toBottomOf="@id/gH01" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gH03"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.3" />
 
     <TextView
-        android:id="@+id/welcome"
+        android:id="@+id/txtWelcome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/work_sans"
-        android:text="Welcome!"
-        android:textSize="25sp"
+        android:text="@string/welcome"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline4"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.312" />
+        app:layout_constraintTop_toBottomOf="@id/gH03" />
 
     <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="15dp"
-        android:layout_marginTop="50dp"
-        android:layout_marginBottom="10dp"
+        android:layout_marginTop="52dp"
         android:layout_marginRight="15dp"
         app:cardBackgroundColor="#FFF7CA"
         app:cardCornerRadius="30dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/welcome">
+        app:layout_constraintTop_toBottomOf="@+id/txtWelcome">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="25dp"
-            android:layout_marginTop="45dp"
-            android:layout_marginRight="25dp"
-            android:layout_marginBottom="20dp"
-
-            >
+            android:layout_height="wrap_content"
+            android:layout_margin="24dp">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/pan"
-                android:layout_width="match_parent"
+                android:id="@+id/txtPanNum"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
+                android:layout_margin="8dp"
                 android:fontFamily="@font/work_sans"
                 android:hint="Enter PAN Number"
                 android:textColorHint="@color/grey"
                 app:layout_constraintTop_toTopOf="parent"
-                tools:layout_editor_absoluteX="0dp" />
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent" />
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/fullname"
-                android:layout_width="match_parent"
+                android:id="@+id/txtFullName"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="24dp"
                 android:fontFamily="@font/work_sans"
                 android:hint="Enter Full Name as PAN"
                 android:textColorHint="@color/grey"
+                android:layout_margin="8dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtPanNum" />
 
-                app:layout_constraintTop_toBottomOf="@+id/pan"
-                tools:layout_editor_absoluteX="0dp" />
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layGender"
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txtFullName">
+
+                <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/work_sans"
+                    android:hint="Select your Gender"
+                    android:inputType="none"
+                    android:textColorHint="@color/grey" />
+            </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/gender"
-                android:layout_width="match_parent"
+                android:id="@+id/txtMobile"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:fontFamily="@font/work_sans"
-                android:hint="Enter your Gender"
-                android:textColorHint="@color/grey"
-                app:layout_constraintTop_toBottomOf="@id/fullname"
-                tools:layout_editor_absoluteX="0dp" />
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/mobile"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
+                android:layout_margin="8dp"
                 android:fontFamily="@font/work_sans"
                 android:hint="Enter your mobile number"
                 android:textColorHint="@color/grey"
-                app:layout_constraintTop_toBottomOf="@id/gender"
-                tools:layout_editor_absoluteX="0dp" />
-
-            <com.google.android.material.button.MaterialButton
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="28dp"
-                android:layout_marginRight="10dp"
-                android:background="@color/yellow"
-                android:fontFamily="@font/work_sans"
-                android:text="Continue"
-                android:textColor="@color/grey"
-                app:cornerRadius="50dp"
-                app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/mobile" />
+                app:layout_constraintTop_toBottomOf="@id/layGender" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnContinue"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:text="Continue"
+                android:fontFamily="@font/work_sans"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                app:cornerRadius="80dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txtMobile" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
-
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

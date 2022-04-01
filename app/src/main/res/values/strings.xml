@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">e-Vote</string>
+    <string name="user_profile_image">User Profile Image</string>
+    <string name="welcome">Welcome!</string>
 </resources>
