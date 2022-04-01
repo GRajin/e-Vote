@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.EVote">
         <activity
+            android:name=".RegisterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AuthActivity"
+            android:exported="false" />
+        <activity
             android:name=".SplashActivity"
             android:exported="true">
             <intent-filter>
