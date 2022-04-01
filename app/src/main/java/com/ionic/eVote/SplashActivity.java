@@ -19,11 +19,14 @@ public class SplashActivity extends AppCompatActivity {
 
         new Handler(Looper.getMainLooper()).postDelayed(() -> {
             SharedPreferences pref = getSharedPreferences("sharedPref", MODE_PRIVATE);
-            if (pref.getString("isFirstTime", "false").equals("true")) {
+            if (pref.getString("isFirstTime", "true").equals("false")) {
                 Intent authIntent = new Intent(SplashActivity.this, AuthActivity.class);
                 startActivity(authIntent);
                 finish();
             } else {
+                SharedPreferences.Editor myEdit = pref.edit();
+                myEdit.putString("isFirstTime", "false");
+                myEdit.apply();
                 Intent registerIntent = new Intent(SplashActivity.this, RegisterActivity.class);
                 startActivity(registerIntent);
                 finish();
