@@ -39,52 +39,80 @@
         android:fontFamily="@font/work_sans"
         android:text="@string/welcome"
         android:textAppearance="@style/TextAppearance.MaterialComponents.Headline4"
-        android:textStyle="bold"
         android:textColor="@color/black"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/gH03" />
 
     <androidx.cardview.widget.CardView
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="15dp"
-        android:layout_marginTop="52dp"
-        android:layout_marginRight="15dp"
+        android:layout_height="0dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginBottom="24dp"
         app:cardBackgroundColor="#FFF7CA"
         app:cardCornerRadius="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtWelcome">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_margin="24dp">
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/txtPanNum"
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layPanNum"
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
                 android:layout_width="0dp"
+                android:textColorHint="@color/black"
                 android:layout_height="wrap_content"
+                app:boxCornerRadiusBottomEnd="16dp"
+                app:boxCornerRadiusBottomStart="16dp"
+                app:boxCornerRadiusTopEnd="16dp"
+                app:boxCornerRadiusTopStart="16dp"
+                app:boxStrokeColor="@color/grey"
                 android:layout_margin="8dp"
-                android:fontFamily="@font/work_sans"
-                android:hint="Enter PAN Number"
-                android:textColorHint="@color/grey"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent" />
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/txtFullName"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/work_sans"
-                android:hint="Enter Full Name as PAN"
-                android:textColorHint="@color/grey"
-                android:layout_margin="8dp"
+                app:layout_constraintBottom_toTopOf="@id/layFullName"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/txtPanNum" />
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/work_sans"
+                    android:hint="Enter PAN Number"
+                    android:textColorHint="@color/grey" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layFullName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/black"
+                app:boxCornerRadiusBottomEnd="16dp"
+                app:boxCornerRadiusBottomStart="16dp"
+                app:boxCornerRadiusTopEnd="16dp"
+                android:layout_margin="8dp"
+                app:boxCornerRadiusTopStart="16dp"
+                app:boxStrokeColor="@color/grey"
+                app:layout_constraintBottom_toTopOf="@id/layGender"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/layPanNum">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/work_sans"
+                    android:hint="Enter Full Name as PAN"
+                    android:textColorHint="@color/grey" />
+            </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/layGender"
@@ -92,9 +120,16 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
+                android:textColorHint="@color/black"
+                app:boxCornerRadiusBottomEnd="16dp"
+                app:boxCornerRadiusBottomStart="16dp"
+                app:boxCornerRadiusTopEnd="16dp"
+                app:boxCornerRadiusTopStart="16dp"
+                app:boxStrokeColor="@color/grey"
+                app:layout_constraintBottom_toTopOf="@id/layMobile"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/txtFullName">
+                app:layout_constraintTop_toBottomOf="@id/layFullName">
 
                 <androidx.appcompat.widget.AppCompatAutoCompleteTextView
                     android:layout_width="match_parent"
@@ -102,20 +137,66 @@
                     android:fontFamily="@font/work_sans"
                     android:hint="Select your Gender"
                     android:inputType="none"
-                    android:textColorHint="@color/grey" />
+                    android:textColorHint="@color/grey"
+                    tools:ignore="SpeakableTextPresentCheck" />
             </com.google.android.material.textfield.TextInputLayout>
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/txtMobile"
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layMobile"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/black"
+                app:boxCornerRadiusBottomEnd="16dp"
+                app:boxCornerRadiusBottomStart="16dp"
+                app:boxCornerRadiusTopEnd="16dp"
+                android:layout_margin="8dp"
+                app:boxCornerRadiusTopStart="16dp"
+                app:boxStrokeColor="@color/grey"
+                app:layout_constraintBottom_toTopOf="@id/layKey"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/layGender">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/work_sans"
+                    android:hint="Enter your mobile number"
+                    android:textColorHint="@color/grey" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layKey"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
-                android:fontFamily="@font/work_sans"
-                android:hint="Enter your mobile number"
-                android:textColorHint="@color/grey"
+                android:textColorHint="@color/black"
+                app:boxCornerRadiusBottomEnd="16dp"
+                app:boxCornerRadiusBottomStart="16dp"
+                app:boxCornerRadiusTopEnd="16dp"
+                app:boxCornerRadiusTopStart="16dp"
+                app:boxStrokeColor="@color/grey"
+                app:layout_constraintBottom_toTopOf="@id/gCH8"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/layGender" />
+                app:layout_constraintTop_toBottomOf="@id/layMobile">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/work_sans"
+                    android:hint="Enter your unique key"
+                    android:textColorHint="@color/grey" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/gCH8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.8" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnContinue"
@@ -123,14 +204,15 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="40dp"
                 android:layout_marginRight="40dp"
-                android:text="Continue"
                 android:fontFamily="@font/work_sans"
+                android:text="Continue"
                 android:textAllCaps="false"
                 android:textColor="@color/black"
                 app:cornerRadius="80dp"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/txtMobile" />
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/gCH8" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
 
