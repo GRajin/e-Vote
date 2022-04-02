@@ -16,7 +16,7 @@ Once the user receives the KEY via email, they can enter the credentials in the 
 After successful login, the user can access the Dashboard which incorporates the information about live elections, local parties, election candidates, upcoming elections etc.
 
 ### Step:5 (Voting)
-For voting, the user has to enter their unique KEY. If the credentials are legit, the user will be eligible to vote in the e-Vote application. To make sure there are no malpractices going on, the camera, mic and screen recording will be catptured while voting and will be verified.
+For voting, the user has to enter their unique KEY. If the credentials are legit, the user will be eligible to vote in the e-Vote application. To make sure there are no malpractices going on, the camera and mic will be catptured while voting and will be verified.
 
 
 ## Pros
