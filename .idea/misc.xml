@@ -5,10 +5,15 @@
       <map>
         <entry key="app/src/main/res/drawable/gradient.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/gradient_background.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_proceed.xml" value="0.1175" />
         <entry key="app/src/main/res/drawable/user_acc.xml" value="0.1705" />
         <entry key="app/src/main/res/layout/activity_auth.xml" value="0.2125" />
+        <entry key="app/src/main/res/layout/activity_instructions.xml" value="0.22" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.17435897435897435" />
         <entry key="app/src/main/res/layout/activity_register.xml" value="0.17215189873417722" />
         <entry key="app/src/main/res/layout/activity_splash.xml" value="0.2125" />
+        <entry key="app/src/main/res/layout/activity_video.xml" value="0.16" />
+        <entry key="app/src/main/res/layout/activity_vote.xml" value="0.17435897435897435" />
         <entry key="app/src/main/res/layout/list_gender.xml" value="0.17443351859769132" />
       </map>
     </option>

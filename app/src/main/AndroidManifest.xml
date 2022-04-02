@@ -3,6 +3,12 @@
     package="com.ionic.eVote">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECORD_VIDEO" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -12,10 +18,19 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.EVote">
         <activity
-            android:name=".RegisterActivity"
+            android:name=".VoteActivity"
             android:exported="false" />
         <activity
-            android:name=".AuthActivity"
+            android:name=".VideoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".InstructionsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RegisterActivity"
             android:exported="false" />
         <activity
             android:name=".SplashActivity"
@@ -26,6 +41,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <service android:name="com.ionic.eVote.services.RecorderService" />
+
     </application>
 
 </manifest>

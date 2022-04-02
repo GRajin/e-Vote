@@ -1,5 +1,6 @@
 package com.ionic.eVote
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.View
@@ -19,6 +20,7 @@ import com.ionic.eVote.models.User
 class RegisterActivity : AppCompatActivity() {
 
     private var binding: ActivityRegisterBinding? = null
+    private lateinit var d: User
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -47,24 +49,26 @@ class RegisterActivity : AppCompatActivity() {
             val mobile = (binding!!.layMobile.editText as TextInputEditText).text.toString()
             val key = (binding!!.layKey.editText as TextInputEditText).text.toString()
 
-            ref.child("Collected").addValueEventListener(object : ValueEventListener {
+            ref.child("Collected Data").addValueEventListener(object : ValueEventListener {
                 override fun onDataChange(dataSnapshot: DataSnapshot) {
-                    val user = User()
-                    if (!dataSnapshot.child("userKey").exists()) {
-                        val mapUser = mapOf(panNum to user)
-                        ref.child("userKey").setValue(mapUser)
-                    } else {
-                        val mapUser: ArrayList<Map<String, User>> = ArrayList()
-                        for (snapshot in dataSnapshot.child("userKey").children) {
-                            val u = snapshot.getValue(User::class.java)!!
-                            val m = mapOf(snapshot.key.toString() to u)
-                            mapUser.add(m)
-                        }
-                        ref.child("userKey").setValue(mapUser)
-                        Toast.makeText(this@RegisterActivity, "Registered", Toast.LENGTH_LONG)
-                            .show()
+                    if (dataSnapshot.child(key).exists()) {
+                        d = dataSnapshot.child(key).getValue(User::class.java)!!
                     }
-                    ref.child("users").removeEventListener(this)
+                    if (d.panNum == panNum) {
+                        if (name == d.name) {
+                            ref.child("users").child(key).setValue(d)
+                            ref.child("Collected Data").child(key).removeValue()
+                            Toast.makeText(
+                                this@RegisterActivity,
+                                "Registered Successfully",
+                                Toast.LENGTH_LONG
+                            ).show()
+                            val intent = Intent(this@RegisterActivity, MainActivity::class.java)
+                            startActivity(intent)
+                            finish()
+                        }
+                    }
+
                 }
 
                 override fun onCancelled(error: DatabaseError) {
