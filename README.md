@@ -25,3 +25,22 @@ For voting, the user has to enter their unique KEY. If the credentials are legit
 * Non-resident Indians and people who live far-off their polling centre can vote easily.
 * Security bypass is not possible as the BLOCKCHAIN technology is used to store information.
 * Trickery is not possible as there is no intermediate person.
+
+
+# Pictures
+## e-Vote Registration:
+![image](https://user-images.githubusercontent.com/75793822/161373053-9c7839fd-1b98-49ac-ba3d-f3b69147deec.png)
+## Data stored in database:
+![WhatsApp Image 2022-04-02 at 1 28 05 PM](https://user-images.githubusercontent.com/75793822/161373200-aff8f4b5-47c4-4a82-a091-b0dcb3ba4c3f.jpeg)
+
+## e-Vote App:
+<img src="https://user-images.githubusercontent.com/75793822/161373243-17a365bb-b9fb-4c4d-bbaf-43c6f80ba999.png" width="300px" height="650px" /> <img src="https://user-images.githubusercontent.com/75793822/161373248-feb848c4-9158-4f6d-8ea1-f1473fdaa97b.png" width="300px" height="650px" /> <img src="https://user-images.githubusercontent.com/75793822/161373257-f5ba04a1-8483-41d5-8855-e0e4276175de.png" width="300px" height="650px" />
+<img src="https://user-images.githubusercontent.com/75793822/161373266-cd0e716b-ad23-44cf-8655-0a89fb0daaab.png" width="300px" height="650px" /> <img src="https://user-images.githubusercontent.com/75793822/161373304-4b024a2b-8677-47ff-85ac-2f93be6f4d5f.png" width="300px" height="650px" />
+<img src="https://user-images.githubusercontent.com/75793822/161373309-0894dffb-aecf-4460-969b-5e810b0d4016.png" width="300px" height="650px" /> <img src="https://user-images.githubusercontent.com/75793822/161373313-6c2dddb9-41e1-493c-9ded-19f96389048b.png" width="300px" height="650px" />
+
+
+
+
+
+
+
