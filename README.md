@@ -6,7 +6,7 @@ This android application replicates the voting system but in an easier, faster a
 ## Working
 
 ### Step:1 (Registration for new users)
-This step if available only for the first time users. The user will have to enter their details such as name, email id(to send the KEY), PAN number, reason and file of proof on the e-Vote KEY generating website. The details will be cross checked with the original data using Government's PAN API. If the details are legit, a unique 10 digit alpha-numeric KEY will be generated for the user and KEY will be sent to user via email.
+This step if available only for the first time users. The user will have to enter their details such as name, email id(to send the KEY), PAN number, reason and file of proof on the e-Vote KEY generating website. The details will be cross checked with the original data. If the details are legit, a unique 10 digit alpha-numeric KEY will be generated for the user and KEY will be sent to user via email.
 
 
 ### Step:2 (Login)
