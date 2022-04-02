@@ -1,33 +1,42 @@
 {
   "project_info": {
-    "project_number": "263626068051",
-    "project_id": "e-vote-33b8e",
-    "storage_bucket": "e-vote-33b8e.appspot.com"
+    "project_number": "850665801570",
+    "firebase_url": "https://e-voteweb-default-rtdb.firebaseio.com",
+    "project_id": "e-voteweb",
+    "storage_bucket": "e-voteweb.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:263626068051:android:595ede23ebe55389beb6a6",
+        "mobilesdk_app_id": "1:850665801570:android:a88ecc8b61e93c72430e3b",
         "android_client_info": {
           "package_name": "com.ionic.eVote"
         }
       },
       "oauth_client": [
         {
-          "client_id": "263626068051-na32cromk0jn2pg1q3k8hmu72hjit0j5.apps.googleusercontent.com",
+          "client_id": "850665801570-mk070qv2psmvko7adak3q3sht75d8fpd.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ionic.eVote",
+            "certificate_hash": "d5d90995e2bfc0518aee686578a5aa90309aa191"
+          }
+        },
+        {
+          "client_id": "850665801570-esf8clgmq4tap3kv5498ppv6akj5ai97.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDwhFPqMfmjX_hcsUKmI-Rb8h5-d75wEhA"
+          "current_key": "AIzaSyAyxrj7h8_h_Dzfqx6pn2mW4sJRK88VPaY"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "263626068051-na32cromk0jn2pg1q3k8hmu72hjit0j5.apps.googleusercontent.com",
+              "client_id": "850665801570-esf8clgmq4tap3kv5498ppv6akj5ai97.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
